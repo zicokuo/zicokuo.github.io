@@ -1,0 +1,25 @@
+{
+  "name": "meblog",
+  "version": "1.0.0",
+  "description": "a blog for github page by vuepress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zicokuo/zicokuo.github.io.git"
+  },
+  "author": "zico",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zicokuo/zicokuo.github.io/issues"
+  },
+  "homepage": "https://github.com/zicokuo/zicokuo.github.io#readme",
+  "devDependencies": {
+    "travis": "^0.1.1",
+    "vuepress": "^1.2.0"
+  }
+}

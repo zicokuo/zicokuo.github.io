@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/zicokuo/zicokuo.github.io#readme",
   "devDependencies": {
-    "@vuepress/plugin-active-header-links": "^1.2.0",
+    "@vuepress/plugin-blog": "^1.7.0",
     "travis": "^0.1.1",
     "vuepress": "^1.2.0"
   },

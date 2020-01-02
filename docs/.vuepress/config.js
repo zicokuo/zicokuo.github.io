@@ -6,7 +6,17 @@ const config = {
         '@vuepress/active-header-links',
         '@vuepress/plugin-nprogress',
         '@vuepress/plugin-register-components',
-        '@vuepress/plugin-back-to-top'
+        '@vuepress/plugin-back-to-top',
+        'vuepress-plugin-comment',
+        {
+          choosen: 'valine', 
+          // options选项中的所有参数，会传给Valine的配置
+          options: {
+            el: '#valine-vuepress-comment',
+            appId: 'Your own appId',
+            appKey: 'Your own appKey'
+          }
+        }
     ],
 
     markdown: {
@@ -23,7 +33,7 @@ const config = {
         nav: [ // 添加导航栏
 
             { text: 'Home', link: '/' },
-            { text: 'Guide', link: '/guide/' },
+            { text: 'Sets', link: '/sets/' },
             { text: 'Post', link: '/post/' },
             { text: 'About', link: '/about/' },
             {

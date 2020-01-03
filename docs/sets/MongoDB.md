@@ -10,13 +10,44 @@
 
 ### MongoDB事务提交
 
->Nodejs中使用批量异步提交MongoDB操作，首先得开启session,操作中传递session进去,最后commit session，如果按500个数据记录就需要分片事务提交，那么就得预先储存多个session，并且通过异步并发运行触发方法进行提交。
+Nodejs中使用批量异步提交MongoDB操作，首先得开启session,操作中传递session进去,最后commit session，如果按500个数据记录就需要分片事务提交，那么就得预先储存多个session，并且通过异步并发运行触发方法进行提交。
 
 `解决方案`
+
  通过批量声明session并暂存到数组,然后使用并发async.parallel进行提交;
+
+## 分片
+
+::: tip
+
+MongoDb分片前需要采用sh.addShare添加分片库
+
+:::
+
+`集合分片`
+
+集合分片需要设定分片依赖的关键key(片键),Mongodb内部的均衡器(Balancer)将会定期对指定数据集合进行数据调度以达到分片间数据量均匀分布
+
+`均匀分布`
+
+采用默认片键的情况下(_id),均匀分布的算法是根据_id的哈希值进行分簇(chunk),将不同的簇平铺到分片上;
+
+::: tip warning
+
+均衡后,实际上数据是以一定量的小集合形式分散在各个分片上,当寻找数据的时候,命中多个分片,即等效并发查库;
+
+若查询区域没有超出簇的寻址范围,实际上有效的查询只在命中范围的分片上,其他分片则会发生空转情况(即使没有数据,也要进行查库,并且获得结果);
+
+:::
+
+## 查询
 
 ### MongoDB Join表
 
 MongoDB Join 表是通过aggregate中$lookup方法进行join操作，join后的记录集合会写入到as配置的字段中，此时数据集中存在嵌套文档的字段,实体相当于leftJoin的一棵树；
+
 `1`  lookup之后，采用unwind获得相当于union right的集合,然后采用addFields把需要的字段添加到结果中；
+
 `2`  lookup之后,直接采用addFields把需要的字段添加到结果集中,相当于union操作；
+
+

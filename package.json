@@ -24,6 +24,7 @@
     "vuepress": "^1.2.0"
   },
   "dependencies": {
+    "vant": "^2.4.1",
     "vuepress-plugin-comment": "^0.7.2"
   }
 }

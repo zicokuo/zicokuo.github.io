@@ -1,31 +1,37 @@
 const config = {
   title: "Zico.kuo",
   description: "a blog for github pages by VuePress",
+  lastUpdated: true, // 最后更新时间
+  displayAllHeaders: true, // 默认值：false
+  // selectText: '选择语言',
+  editLinkText: "编辑此页",
 
   plugins: [
+    "vant",
     "@vuepress/active-header-links",
     "@vuepress/plugin-nprogress",
     "@vuepress/plugin-register-components",
     "@vuepress/plugin-back-to-top",
-    "@vuepress/blog",
-    {
-      directories: [
-        {
-          // Unique ID of current classification
-          id: "post",
-          // Target directory
-          dirname: "post",
-          // Path of the `entry page` (or `list page`)
-          path: "/",
-          layout: "/post/theme/Layout",
-          itemLayout: "MyPost",
-          sitemap: {
-            hostname: "https://zicokuo.github.io"
+    [
+      "@vuepress/blog",
+      {
+        directories: [
+          {
+            // Unique ID of current classification
+            id: "post",
+            // Target directory
+            dirname: "post",
+            // Path of the `entry page` (or `list page`)
+            path: "/",
+            layout: "/post/theme/Layout",
+            itemLayout: "MyPost",
+            sitemap: {
+              hostname: "https://zicokuo.github.io"
+            }
           }
-        }
-      ]
-    },
-   
+        ]
+      }
+    ]
   ],
 
   markdown: {

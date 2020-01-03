@@ -1,18 +1,19 @@
 <template>
   <div>
-    <p>This Category has {{ $categoryRouter.length-1}} Posts</p>
-
-    <div
-      v-for="(route,index) in $categoryRouter"
-      :key="index"
-    >
-      <router-link
-        :to="route.path"
-        v-if="route.title"
-      >
-        No.{{index+1}} - {{route.title}}
+    <p>This Category has {{ $categoryRouter.length - 1 }} Posts</p>
+    <div v-for="(route, index) in $categoryRouter" :key="index">
+      <router-link :to="route.path" v-if="route.title">
+        No.{{ index + 1 }} - {{ route.title }}
       </router-link>
     </div>
+    <van-collapse v-model="activeNames">
+      <van-collapse-item title="标题1" name="1">内容1</van-collapse-item>
+      <van-collapse-item title="标题2" name="2">内容2</van-collapse-item>
+      <van-collapse-item title="标题3" name="3" disabled
+        >内容3</van-collapse-item
+      >
+    </van-collapse>
+    <van-switch v-model="checked" />
   </div>
 </template>
 
@@ -20,7 +21,10 @@
 export default {
   name: "categoryNavigator",
   data() {
-    return {};
+    return {
+      activeNames: [1],
+      checked: true
+    };
   },
   computed: {
     $categoryRouter: {
@@ -35,5 +39,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>

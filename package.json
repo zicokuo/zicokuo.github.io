@@ -19,12 +19,22 @@
   },
   "homepage": "https://github.com/zicokuo/zicokuo.github.io#readme",
   "devDependencies": {
+    "@mdi/font": "^4.7.95",
     "@vuepress/plugin-blog": "^1.7.0",
+    "deepmerge": "^4.2.2",
+    "fibers": "^4.0.2",
+    "sass": "^1.24.2",
+    "sass-loader": "^8.0.0",
     "travis": "^0.1.1",
-    "vuepress": "^1.2.0"
+    "vuepress": "^1.2.0",
+    "vuepress-plugin-baidu-autopush": "^1.0.1",
+    "vuepress-plugin-social-share": "^0.1.2",
+    "vuetify": "^2.2.1",
+    "vuetify-loader": "^1.4.3"
   },
   "dependencies": {
     "vant": "^2.4.1",
+    "vue-cookies": "^1.6.1",
     "vuepress-plugin-comment": "^0.7.2"
   }
 }

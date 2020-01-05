@@ -1,3 +1,5 @@
+// const webpackVuetify  = require('./config/webpackForVuetify')
+
 const config = {
   title: "Zico.kuo",
   description: "a blog for github pages by VuePress",
@@ -5,13 +7,17 @@ const config = {
   displayAllHeaders: true, // 默认值：false
   // selectText: '选择语言',
   editLinkText: "编辑此页",
-
+  postcss: [require('autoprefixer')],
+  sass:{indentedSyntax:true},
+  // ...webpackVuetify,
   plugins: [
-    "vant",
     "@vuepress/active-header-links",
     "@vuepress/plugin-nprogress",
     "@vuepress/plugin-register-components",
     "@vuepress/plugin-back-to-top",
+    "vuepress-plugin-baidu-autopush",
+    "vuepress-plugin-social-share",
+    "vuepress-plugin-alias",
     [
       "@vuepress/blog",
       {

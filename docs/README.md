@@ -3,7 +3,6 @@
 > a blog for record deving Q & A by Zico
 
 
-<postComment/>
 ---
 ::: tip Footer
 

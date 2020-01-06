@@ -22,7 +22,7 @@ const config = {
     //  百度SEO自动推送
     "vuepress-plugin-baidu-autopush",
     //  社交分享 - 考虑干掉
-    "vuepress-plugin-social-share",
+    // "vuepress-plugin-social-share",
     //  MD文件内部别名
     "vuepress-plugin-alias",
     [

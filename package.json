@@ -28,7 +28,7 @@
     "travis": "^0.1.1",
     "vuepress": "^1.2.0",
     "vuepress-plugin-baidu-autopush": "^1.0.1",
-    "vuepress-plugin-social-share": "^0.1.2",
+    // "vuepress-plugin-social-share": "^0.1.2",
     "vuetify": "^2.2.1",
     "vuetify-loader": "^1.4.3"
   },

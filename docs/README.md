@@ -1,5 +1,5 @@
 # Zico.kuo Blog
-
+home:true
 > a blog for record deving Q & A by Zico
 
 

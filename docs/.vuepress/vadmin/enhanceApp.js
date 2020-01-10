@@ -2,7 +2,7 @@ import Vuetify from "vuetify";
 import "vuetify/dist/vuetify.min.css";
 import '@mdi/font/css/materialdesignicons.css';
 import VueCookies from 'vue-cookies'
-import Vadmin from "./router";
+import Vadmin from "./install";
 
 export default ({
     Vue, // VuePress 正在使用的 Vue 构造函数

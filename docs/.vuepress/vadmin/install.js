@@ -1,5 +1,5 @@
 // vadmin pure js admin backend
-import vadminRouter from './router';
+import vadminRouter from './router/index';
 
 export default {
     install(Vue, options = {}) {
@@ -8,9 +8,10 @@ export default {
         options.router.addRoutes(vadminRouter);
 
         //  增加一个nav导航
-        options.siteData.themeConfig.nav.push(
-            { text: "Admin", link: "/vadmin/" },
-        )
+        options.siteData.themeConfig.nav.push({
+            text: "Admin",
+            link: "/vadmin/"
+        }, )
 
         //  登录拦截
         options.router.beforeEach((to, from, next) => {

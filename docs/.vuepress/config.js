@@ -22,8 +22,6 @@ const config = {
     "@vuepress/plugin-register-components",
     //  百度SEO自动推送
     "vuepress-plugin-baidu-autopush",
-    //  社交分享 - 考虑干掉
-    // "vuepress-plugin-social-share",
     [
       //  VuePress Blog
       "@vuepress/blog",
@@ -57,7 +55,7 @@ const config = {
         clientSecret: "19ac0f6a91528ed3ea1452d934b405595c640be7"
       }
     ],
-    require('./vadmin/index.js')
+    // require('./vadmin/index.js')
   ],
 
   //  markdown 编译

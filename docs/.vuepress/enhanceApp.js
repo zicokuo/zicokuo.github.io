@@ -1,8 +1,4 @@
-// import Vuetify from "vuetify";
-// import "vuetify/dist/vuetify.min.css";
-// import '@mdi/font/css/materialdesignicons.css';
 import VueCookies from 'vue-cookies'
-// import Vadmin from "./vadmin/vadmin";
 
 export default ({
     Vue, // VuePress 正在使用的 Vue 构造函数
@@ -11,15 +7,5 @@ export default ({
     siteData // 站点元数据
 }) => {
     Vue.use(VueCookies);
-    // Vue.use(Vuetify);
-    // Vue.use(Vadmin, {
-    //     router: router,
-    //     siteData: siteData
-    // });
-    // options.vuetify = new Vuetify({
-    //     icons: {
-    //         iconfont: 'mdi', // default - only for display purposes
-    //     },
-    // })
     // ...做一些其他的应用级别的优化
 };

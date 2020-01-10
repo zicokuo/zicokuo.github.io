@@ -1,38 +1,38 @@
 <template>
-  <v-card class="overflow-hidden">
-    <v-app-bar
-      :collapse="!collapseOnScroll"
-      :collapse-on-scroll="collapseOnScroll"
-      absolute
-      color="deep-purple accent-4"
-      dark
-      scroll-target="#scrolling-techniques-6"
-    >
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
+  <v-app-bar
+    fixed
+    dark
+    elevate-on-scroll
+    fade-img-on-scroll
+    scroll-target='#main'
+  >
+    <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
-      <v-toolbar-title>Collapsing Bar</v-toolbar-title>
+    <v-toolbar-title>{{$site.title}}</v-toolbar-title>
 
-      <v-spacer></v-spacer>
+    <v-spacer></v-spacer>
 
-      <v-checkbox
-        v-model="collapseOnScroll"
-        color="white"
-        hide-details
-      ></v-checkbox>
-    </v-app-bar>
-    <v-sheet
-      id="scrolling-techniques-6"
-      class="overflow-y-auto"
-      max-height="600"
-    >
-      <v-container style="height: 1000px;"></v-container>
-    </v-sheet>
-  </v-card>
+    <v-btn icon>
+      <v-icon>mdi-magnify</v-icon>
+    </v-btn>
+
+    <v-btn icon>
+      <v-icon>mdi-heart</v-icon>
+    </v-btn>
+
+    <v-btn icon>
+      <v-icon>mdi-dots-vertical</v-icon>
+    </v-btn>
+  </v-app-bar>
 </template>
 <script>
 export default {
+  name: "TopNavBar",
   data: () => ({
     collapseOnScroll: true
-  })
+  }),
+  props: {
+    scrollParent: null
+  }
 };
 </script>

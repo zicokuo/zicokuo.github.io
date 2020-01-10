@@ -1,9 +1,5 @@
 <template>
-  <div>
-    单页
-    <Content />
-    <sider-bar>1</sider-bar>
-  </div>
+  <Content />
 </template>
 <script>
 import Vue from "vue";

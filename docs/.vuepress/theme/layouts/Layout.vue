@@ -1,30 +1,34 @@
 <template>
-  <div class="overflow-hidden">
-    <TopNavBar />
+  <div
+    class="overflow-hidden"
+    flex
+  >
+    <!-- <TopNavBar /> -->
     <v-sheet
       id='main'
-      style="height=600px"
+      style="height=100vh"
     >
-      <v-row>
-        <v-col>
-          <SideBar />
-        </v-col>
-        <v-col>
-          <Page />
-        </v-col>
-      </v-row>
+      <SideBar />
+      <v-container>
+
+        <v-row>
+          <v-col>
+            <Crumb />
+            <Page />
+          </v-col>
+        </v-row>
+      </v-container>
+
     </v-sheet>
   </div>
 
 </template>
 <script>
 export default {
-  components: { Page: () => import("./Page") }
+  components: {
+    Page: () => import("@theme/layouts/Page.vue"),
+    Crumb: () => import("@theme/layouts/Crumb.vue")
+  }
 };
 </script>
-<style lang="stylus" scoped>
-.overflow-hidden {
-  height: 100vh;
-  overflow: auto;
-}
-</style>
+

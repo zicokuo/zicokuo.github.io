@@ -1,7 +1,6 @@
 <template>
   <v-app-bar
     fixed
-    dark
     elevate-on-scroll
     fade-img-on-scroll
     scroll-target='#main'

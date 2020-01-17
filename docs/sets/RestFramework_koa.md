@@ -4,4 +4,4 @@
 
 ## 简介
 
-RestFramework for Koa (以下简称rest-koa)是一款针对Koa框架开发的Rest API 套件;
+RestFramework for Koa (以下简称 rest-koa)是一款针对 Koa 框架开发的 Rest API 套件;

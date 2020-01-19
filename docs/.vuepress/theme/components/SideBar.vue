@@ -3,11 +3,10 @@
   <div>
     <v-navigation-drawer
       fixed
-      dark
-      floating
+      position
       permanent
-      mini-variant
-      expand-on-hover
+      right
+      dark
     >
       <v-list
         dense

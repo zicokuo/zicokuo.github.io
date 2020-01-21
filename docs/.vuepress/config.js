@@ -106,7 +106,9 @@ const config = {
     ],
     // 添加侧边栏
     sidebar: "auto",
-    sidebarDepth: 3
+    sidebarDepth: 3,
+    darkMode: false,
+
   }
 };
 

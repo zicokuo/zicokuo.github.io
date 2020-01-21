@@ -1,38 +1,33 @@
 <template>
-
-  <div>
-    <v-navigation-drawer
-      fixed
-      position
-      permanent
-      right
-      dark
-    >
-      <v-list
-        dense
-        rounded
+  <v-navigation-drawer
+    class="nav-drawer"
+    permanent
+    fixed
+    app
+    height='640'
+    :light="$themeConfig.darkMode===false"
+  >
+    <v-list dense>
+      <v-list-item>
+        Blog
+      </v-list-item>
+      <v-list-item
+        color="blue"
+        v-for="item in navs"
+        :key="item.text"
+        :href="item.link || '#'"
+        link
       >
-        <v-list-item>
-          Blog
-        </v-list-item>
-        <v-list-item
-          color="blue"
-          v-for="item in navs"
-          :key="item.text"
-          :href="item.link || '#'"
-          link
-        >
-          <v-list-item-icon>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-icon>
+        <v-list-item-icon>
+          <v-icon>{{ item.icon }}</v-icon>
+        </v-list-item-icon>
 
-          <v-list-item-content>
-            <v-list-item-title>{{ item.text }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-  </div>
+        <v-list-item-content>
+          <v-list-item-title>{{ item.text }}</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+    </v-list>
+  </v-navigation-drawer>
 </template>
 <script>
 export default {
@@ -45,6 +40,9 @@ export default {
       ]
     };
   },
+  props: {
+    position: null
+  },
   computed: {
     navs: {
       get() {
@@ -56,6 +54,15 @@ export default {
 </script>
 <style lang="stylus" scoped>
 .nav {
+  height: 400px;
+  width: 256px;
+
+  &-drawer {
+    height: 640px;
+    position: fixed;
+    margin-top: 220px;
+  }
+
   & .active {
     background;
   }

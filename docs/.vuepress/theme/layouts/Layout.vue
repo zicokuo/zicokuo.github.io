@@ -1,16 +1,10 @@
 <template>
-  <div
-    class="overflow-hidden"
-    flex
-  >
-    <!-- <TopNavBar /> -->
-    <v-sheet
-      id='main'
-      style="height=100vh"
-    >
-      <SideBar />
-      <v-container>
+  <div flex>
+    <SideBar position='left' />
+    <TopNavBar tag="#main" />
+    <v-sheet id='main'>
 
+      <v-container style="margin:auto;max-width:960px">
         <v-row>
           <v-col>
             <Crumb />
@@ -18,8 +12,8 @@
           </v-col>
         </v-row>
       </v-container>
-
     </v-sheet>
+
   </div>
 
 </template>
@@ -28,6 +22,7 @@ export default {
   components: {
     Page: () => import("@theme/layouts/Page.vue"),
     Crumb: () => import("@theme/layouts/Crumb.vue")
+    // TopNav:()=>import("@theme/components/TopNavBar")
   }
 };
 </script>

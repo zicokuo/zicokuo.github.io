@@ -3,18 +3,13 @@
     fixed
     elevate-on-scroll
     fade-img-on-scroll
-    :scroll-target='tag'
+    scroll-target="html"
     color="#43a047"
     dark
-    shrink-on-scroll
-    prominent
-    src="https://picsum.photos/1920/1080?random"
-    fade-img-on-scroll
-    shrink-on-scroll
   >
     <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
-    <v-toolbar-title>{{$site.title}}</v-toolbar-title>
+    <v-toolbar-title>{{ $site.title }}</v-toolbar-title>
 
     <v-spacer></v-spacer>
 

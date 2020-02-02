@@ -1,7 +1,7 @@
 // const webpackVuetify  = require('./config/webpackForVuetify')
 
 const config = {
-  theme: "./themeZico",
+  theme: "./theme",
   title: "Zico.kuo",
   description: "a blog for github pages by VuePress",
   lastUpdated: true, // 最后更新时间
@@ -23,24 +23,26 @@ const config = {
     //  百度SEO自动推送
     "vuepress-plugin-baidu-autopush",
     [
-      //  VuePress Blog
-      "@vuepress/blog",
-      {
+      '@vuepress/blog', {
         directories: [{
           // Unique ID of current classification
-          id: "post",
+          id: "posts",
           // Target directory
-          dirname: "post",
+          dirname: "posts",
           // Path of the `entry page` (or `list page`)
-          path: "/",
-          layout: "/post/theme/layout/post",
-          // itemLayout: "post",
-          sitemap: {
-            hostname: "https://zicokuo.github.io"
-          }
+          path: "/posts/",
+          keys: ['tag', 'category', 'tags', 'title', 'createdAt'],
+          // itemPermalink: '/posts/:year/:month/:day/:slug',
+          layout: "Category",
+          // scopeLayout: 'Category',
+          // itemLayout: "/_posts/theme/post",
+          // sitemap: {
+          //   hostname: "https://zicokuo.github.io"
+          // }
         }]
       }
     ],
+
     [
       //  Vusue github 评论
       "@vssue/vuepress-plugin-vssue",
@@ -61,8 +63,8 @@ const config = {
   //  markdown 编译
   markdown: {
     anchor: {
-      // permalink: true,
-      // permalinkBefore: true,
+      permalink: true,
+      permalinkBefore: true,
       permalinkSymbol: "#"
     },
     lineNumbers: true,
@@ -85,7 +87,7 @@ const config = {
       },
       {
         text: "Post",
-        link: "/post/"
+        link: "/posts/"
       },
       {
         text: "About",
@@ -108,7 +110,6 @@ const config = {
     sidebar: "auto",
     sidebarDepth: 3,
     darkMode: false,
-
   }
 };
 

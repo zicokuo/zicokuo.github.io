@@ -1,3 +1,4 @@
+import Lodash from "lodash";
 import Vuetify from "vuetify";
 import "vuetify/dist/vuetify.min.css";
 import '@mdi/font/css/materialdesignicons.css';
@@ -13,6 +14,11 @@ export default ({
 }) => {
     Vue.use(VueCookies);
     Vue.use(Vuetify);
+    Vue.use({
+        install: (Vue) => {
+            Vue.$_ = Lodash
+        }
+    });
     options.vuetify = new Vuetify({
         breakpoint: {
             scrollBarWidth: 10,

@@ -14,6 +14,9 @@ const config = {
   },
   // ...webpackVuetify,
   plugins: [
+    ['@vuepress/search', {
+      searchMaxSuggestions: 10
+    }],
     //  头部导航高亮
     "@vuepress/active-header-links",
     //  页面进度条

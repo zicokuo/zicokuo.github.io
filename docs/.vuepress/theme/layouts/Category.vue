@@ -11,7 +11,10 @@
         <v-card-title class="headline">
           <v-row>
             <v-col>
-              <v-chip label outlined>
+              <v-chip
+                label
+                outlined
+              >
                 {{ postGroupIndex }}
               </v-chip>
             </v-col>
@@ -30,17 +33,13 @@
                 }}</router-link>
               </v-list-item-title>
               <v-list-item-subtitle v-if="catePost.frontmatter.metaTitle">
-                {{ catePost.frontmatter.metaTitle. }}
+                {{ catePost.frontmatter.metaTitle }}
               </v-list-item-subtitle>
             </v-list-item-content>
             <v-list-item-action>
-              <v-list-item-action-text
-                v-text="catePost.frontmatter.createAt"
-              ></v-list-item-action-text>
+              <v-list-item-action-text v-text="catePost.frontmatter.createAt"></v-list-item-action-text>
               <template v-if="catePost.frontmatter.tags">
-                <PostTags
-                  :tags="catePost.frontmatter.tags.split(',')"
-                ></PostTags>
+                <PostTags :tags="catePost.frontmatter.tags ?catePost.frontmatter.tags.split(','):''"></PostTags>
               </template>
             </v-list-item-action>
           </v-list-item>

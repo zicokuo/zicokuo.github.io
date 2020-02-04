@@ -1,7 +1,21 @@
 <template>
   <div flex>
-    <v-btn v-on:click="prevNav">返回</v-btn>
-    <v-breadcrumbs :items="items" divider=">"></v-breadcrumbs>
+    <v-row algin="center">
+      <v-col>
+        <v-breadcrumbs
+          :items="items"
+          divider=">"
+        >
+        </v-breadcrumbs>
+      </v-col>
+      <v-col cols="auto">
+        <v-btn
+          @click="prevNav"
+          right
+        >back</v-btn>
+      </v-col>
+    </v-row>
+    <v-divider></v-divider>
   </div>
 </template>
 <script>

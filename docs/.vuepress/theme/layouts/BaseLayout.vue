@@ -1,24 +1,46 @@
 <template>
-  <div>
-    <TopNavBar tag="#main" />
-    <SideBar position="left" />
-    <v-container id="main" style="max-width:960px">
-      <v-row>
-        <v-col>
-          <Crumb />
-          <slot name="renderer">
-            <p>渲染插槽</p>
-          </slot>
-        </v-col>
-      </v-row>
-    </v-container>
-  </div>
+  <v-row
+    id="baseLayout"
+    no-gutters
+  >
+    <v-col>
+      <!-- <TopNavBar tag="#main" /> -->
+      <Crumb />
+      <slot name="renderer">
+        <p>渲染插槽</p>
+      </slot>
+    </v-col>
+    <v-col cols="auto">
+      <SideBar />
+    </v-col>
+
+  </v-row>
 </template>
 <script>
-export default {};
+export default {
+  name: "BaseLayout"
+};
 </script>
 <style lang="stylus">
+body, html {
+  // overflow: hidden;
+}
+
+#baseLayout {
+  height: 100vh;
+  overflow: hidden;
+
+  & .side {
+    overflow: hidden;
+    height: 100vh;
+  }
+}
+
 #main {
-  margin-top: 120px;
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 </style>

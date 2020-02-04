@@ -1,7 +1,13 @@
 <template>
   <BaseLayout>
     <template v-slot:renderer>
-      <Page />
+      <v-container class="main">
+        <v-row>
+          <v-col>
+            <Page />
+          </v-col>
+        </v-row>
+      </v-container>
     </template>
   </BaseLayout>
 </template>
@@ -15,6 +21,7 @@ export default {
 </script>
 <style lang="stylus">
 .main {
-  margin-top: 120px;
+  max-width: 960px;
+  margin: auto;
 }
 </style>

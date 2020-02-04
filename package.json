@@ -29,7 +29,6 @@
     "vuetify-loader": "^1.4.3",
     "vuepress": "^1.2.0",
     "@vssue/api-github-v4": "^1.4.0"
-
   },
   "dependencies": {
     "@mdi/font": "^4.7.95",

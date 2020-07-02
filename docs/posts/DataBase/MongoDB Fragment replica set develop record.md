@@ -6,7 +6,7 @@ tags: MongoDB,
 createAt: 2020-02-02 09:11
 ---
 
-# mongoDb 分片副本集 开发纪要
+# mongoDb2 分片副本集 开发纪要
 
 ## 集群
 
